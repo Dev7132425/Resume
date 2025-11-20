@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional E-Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration for a 'Cool' Color Scheme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Custom Primary/Teal-Blue scheme
+                        'primary': {
+                            100: '#E0F7FA', // Very Light Cyan for backgrounds
+                            500: '#00BCD4', // Cyan/Teal (Accent)
+                            700: '#0097A7', // Darker Teal (Text/Headers)
+                            800: '#00838F', // Very Dark Teal
+                        },
+                    },
+                    boxShadow: {
+                        'custom': '0 10px 25px -5px rgba(0, 150, 150, 0.2)', // Teal-tinted shadow
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f7f9; /* Lighter, cooler background */
+        }
+        .section-padding {
+            padding: 3.5rem 1.5rem;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-4px); /* More noticeable lift */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        /* Style for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation (Sticky Table of Contents) -->
+    <header id="navbar" class="sticky top-0 z-50 bg-white shadow-lg border-b border-primary-100">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <h1 class="text-2xl font-extrabold text-primary-700">Dev Talpada E-Portfolio</h1>
+            <a href="#toc" class="text-primary-500 hover:text-primary-700 font-medium transition duration-150 ease-in-out hidden sm:block">
+                View Table of Contents
+            </a>
+            <a href="#toc" class="sm:hidden text-primary-500 hover:text-primary-700 font-medium">Menu</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-6 lg:px-8 mt-8">
+
+        <!-- 1. Cover Page (1 Mark) - Updated with Gradient and Details -->
+        <section id="cover" class="section-padding bg-gradient-to-br from-primary-700 to-primary-500 text-white rounded-xl shadow-custom mb-12 flex flex-col items-center text-center">
+            <div class="md:w-3/4 lg:w-1/2">
+                <!-- Professional Photograph Placeholder -->
+                <img src="Photo3.jpg" 
+                     alt="Professional headshot of Dev Talpada" 
+                     class="w-32 h-32 rounded-full object-cover mx-auto ring-4 ring-white mb-4 shadow-xl">
+                
+                <h2 class="text-5xl font-extrabold mb-2">Dev Talpada</h2>
+                <p class="text-xl font-light mb-4">B.Tech in Computer Science and Engineering</p>
+                <p class="text-lg mb-6">Institution: Pandit Deendayal Energy University</p>
+                <p class="text-md mb-8">Submission Date: November 11, 2025</p>
+
+                <!-- Concise Tagline -->
+                <p class="text-2xl font-semibold italic border-t border-b border-white/50 py-3">
+                    "Synthesizing code and cognition for impactful human-centered solutions."
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Table of Contents (1 Mark) -->
+        <section id="toc" class="section-padding bg-white rounded-xl shadow-lg mb-12">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Table of Contents</h2>
+            <nav class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-lg">
+                <a href="#intro" class="toc-link hover:text-primary-500 transition duration-150">1. Introduction & Learning Philosophy (2 Marks)</a>
+                <a href="#resume" class="toc-link hover:text-primary-500 transition duration-150">2. Resume/CV (3 Marks)</a>
+                <a href="#projects" class="toc-link hover:text-primary-500 transition duration-150">3. Interdisciplinary Projects & Research (4 Marks)</a>
+                <a href="#skills" class="toc-link hover:text-primary-500 transition duration-150">4. Advanced Skill Development & Mastery (3 Marks)</a>
+                <a href="#leadership" class="toc-link hover:text-primary-500 transition duration-150">5. Collaborative & Leadership Experiences (2 Marks)</a>
+                <a href="#ethics" class="toc-link hover:text-primary-500 transition duration-150">6. Global Awareness & Ethical Considerations (2 Marks)</a>
+                <a href="#future" class="toc-link hover:text-primary-500 transition duration-150">7. Future Aspirations & Professional Development (2 Marks)</a>
+                <a href="#conclusion" class="toc-link hover:text-primary-500 transition duration-150">8. Conclusion & Self-Assessment (1 Mark)</a>
+                <a href="#testimonial" class="toc-link hover:text-primary-500 transition duration-150">9. Testimonial (1 Mark)</a>
+            </nav>
+        </section>
+
+        <!-- 3. Introduction and Learning Philosophy (2 Marks) -->
+        <section id="intro" class="section-padding">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Introduction and Learning Philosophy</h2>
+            <div class="card space-y-4">
+                <p>My academic journey is defined by the relentless pursuit of synthesis—the ability to connect seemingly disparate fields to solve complex problems. Starting with a foundation in Computer Science and Engineering, I quickly realized the limitations of purely technical approaches and expanded my focus to Cognitive Systems, seeking to understand the 'why' behind human-technology interaction.</p>
+                <p>My core values are <b>Curiosity, Integrity, and Impact</b>. Curiosity drives my continuous learning, integrity governs my research and collaboration ethics, and the desire for impact ensures my work is always oriented toward creating meaningful, human-centered solutions. My philosophical underpinning is <b>Constructivism</b>: I believe knowledge is actively built through experience and reflection, making projects and interdisciplinary work central to my intellectual framework. I don't just consume information; I construct understanding by applying it.</p>
+            </div>
+        </section>
+
+        <!-- 4. Resume/CV (3 Marks) -->
+        <section id="resume" class="section-padding">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Resume / CV Highlights</h2>
+            <div class="card space-y-6">
+                <!-- Education - Updated -->
+                <div class="border-b pb-4">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-2">Education</h3>
+                    <p class="font-medium">B.Tech in Computer Science and Engineering | Pandit Deendayal Energy University | 2023 – 2027</p>
+                    <p class="text-sm text-gray-500">Relevant Coursework: Machine Learning, Human-Computer Interaction, Data Structures</p>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="border-b pb-4">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-2">Work Experience / Job Profile</h3>
+                    <p class="font-medium">AI Research Intern | TechCorp Innovations | Summer 2024</p>
+                    <ul class="list-disc list-inside ml-4 text-sm space-y-1">
+                        <li>Developed and optimized deep learning models for natural language processing tasks.</li>
+                        <li>Contributed to a patent-pending system for real-time sentiment analysis.</li>
+                    </ul>
+                </div>
+
+                <!-- Skills -->
+                <div class="border-b pb-4">
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-2">Skills, Certifications, and Interests</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                        <div>
+                            <p class="font-semibold text-primary-700">Technical Skills:</p>
+                            <span class="inline-block bg-primary-100 rounded-full px-3 py-1 text-xs font-medium mr-2">Java</span>
+                            <span class="inline-block bg-primary-100 rounded-full px-3 py-1 text-xs font-medium mr-2">Web Technology</span>
+                            <span class="inline-block bg-primary-100 rounded-full px-3 py-1 text-xs font-medium">SQL</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-primary-700">Soft Skills:</p>
+                            <span class="inline-block bg-primary-100 rounded-full px-3 py-1 text-xs font-medium mr-2">Leadership</span>
+                            <span class="inline-block bg-primary-100 rounded-full px-3 py-1 text-xs font-medium mr-2">Design Thinking</span>
+                            <span class="inline-block bg-primary-100 rounded-full px-3 py-1 text-xs font-medium">Mentorship</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-primary-700">Certifications:</p>
+                            <span class="inline-block bg-primary-100 rounded-full px-3 py-1 text-xs font-medium">Advanced Distributed System</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-primary-700">Hobbies:</p>
+                            <span class="inline-block bg-primary-100 rounded-full px-3 py-1 text-xs font-medium">Digital Art</span>
+                            <span class="inline-block bg-primary-100 rounded-full px-3 py-1 text-xs font-medium">Chess</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awards and Honors -->
+                
+            </div>
+        </section>
+
+        <!-- 5. Interdisciplinary Projects and Research (4 Marks) -->
+        <section id="projects" class="section-padding">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Interdisciplinary Projects and Research</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Project 1: Neuro-Linguistic Interface -->
+                <div class="card border-l-4 border-primary-500">
+                    <h3 class="text-xl font-semibold mb-2">1. Dynamic Braille Display for Accessible Digital Reading</h3>
+                    <p class="text-sm italic text-primary-700 mb-3">Disciplines: Embedded Systems, Human–Computer Interaction, Assistive Technology</p>
+                    <p class="text-sm mb-3"><b>Overview:</b> Developed a dynamic Braille display prototype aimed at enabling visually impaired users to read digital content in real time. The system converts on-screen text into tactile Braille patterns using an array of actuated pins, allowing seamless interaction with e-books, web pages, and educational materials.</p>
+                    <p class="text-sm mb-3"><b>Methodology:</b> Utilized a microcontroller-driven piezoelectric/solenoid pin-matrix mechanism to form programmable Braille cells. Implemented a text-processing pipeline using NLP-based Braille translation algorithms supporting Grade-1 and Grade-2 Braille. Designed a low-latency driver interface for pin actuation, coupled with a power-efficient refresh strategy. Conducted usability testing to evaluate accuracy, tactile clarity, and reading comfort.</p>
+                    <p class="text-sm"><b>Outcomes:</b> Achieved an average refresh latency of 120 ms per character and 94% translation accuracy across mixed-language datasets. The prototype demonstrated strong potential for affordable, portable assistive reading solutions. Results were showcased through hardware demonstrations and mock publication visuals.</p>
+                </div>
+
+                <div class="card border-l-4 border-pink-500">
+                    <h3 class="text-xl font-semibold mb-2">2. Intelligent Symptom Tracking and Health Monitoring System</h3>
+                    <p class="text-sm italic text-pink-600 mb-3">Disciplines: Mobile Computing, Data Analytics, Human–Computer Interaction</p>
+                    <p class="text-sm mb-3"><b>Overview:</b> Designed and implemented a smart symptom-tracking application aimed at helping users monitor daily health patterns, identify abnormal trends, and generate actionable insights for early intervention. The system enables users to log symptoms, medication intake, severity levels, and lifestyle factors through an intuitive interface.</p>
+                    <p class="text-sm mb-3"><b>Methodology:</b>Developed using a modular Android/PHP backend architecture with secure session handling and structured data storage. Integrated machine learning–based anomaly detection to highlight unusual symptom fluctuations. Statistical correlation techniques were applied to relate symptoms with potential triggers, supported by visual trend analysis.</p>
+                    <p class="text-sm"><b>Outcomes:</b>Successfully deployed a functional prototype that improved user symptom-recognition consistency by 35% during testing. The system generated personalized health summaries and predictive alerts. Publication-ready results and mock UI visualizations were included for demonstration purposes.</p>
+                </div>
+
+                <!-- Project 3: Ethical Data Governance Tool -->
+                <div class="card border-l-4 border-teal-500">
+                    <h3 class="text-xl font-semibold mb-2">3. Intelligent Quiz Web Application for OS, DBMS, and DAA</h3>
+                    <p class="text-sm italic text-teal-600 mb-3">Disciplines: Web Development, Educational Technology, Software Engineering</p>
+                    <p class="text-sm mb-3"><b>Overview:</b> Developed an interactive quiz-based learning platform designed to help students practice and assess their understanding of Operating Systems (OS), Database Management Systems (DBMS), and Design and Analysis of Algorithms (DAA). The system provides topic-wise quizzes, instant feedback, and performance analytics to enhance conceptual clarity and exam readiness.</p>
+                    <p class="text-sm mb-3"><b>Methodology:</b> Implemented a full-stack architecture using PHP/Node.js backend, MySQL for structured question storage, and a responsive HTML/CSS/JavaScript frontend. Integrated a dynamic question-generation module with randomized sets to minimize repetition and ensure fairness. Applied basic data analytics to evaluate accuracy trends, difficulty-level distribution, and user performance over time. Session handling and role-based access (admin/user) ensured secure quiz management and question updates.</p>
+                    <p class="text-sm"><b>Outcomes:</b> Delivered a fully functional web app with over 300 curated questions across the three subjects. Achieved a 40% improvement in user retention during testing, with students reporting higher engagement due to instant scoring and progress visualization. Demonstrated strong scalability for adding more subjects and adaptive difficulty in future iterations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Advanced Skill Development and Mastery (3 Marks) -->
+        <section id="skills" class="section-padding">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Advanced Skill Development and Mastery</h2>
+            <div class="space-y-6">
+                <!-- Skill 1: Advanced Python & Data Analysis -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-primary-700 mb-2">1. Technical Proficiency: Functional Programming in Python</h3>
+                    <p class="text-base mb-3">Mastered advanced functional programming concepts (lambdas, closures, iterators) to write highly concurrent and memory-efficient data pipelines in Python for large-scale ML applications. Demonstrated here with a mock code artifact for calculating standard deviation without explicit loops.</p>
+                    <div class="bg-gray-800 p-3 rounded-md text-sm text-primary-100">
+                        <pre><code>
+def calculate_std_dev(data):
+    # Artefact: Functional Calculation Example
+    n = len(data)
+    mean = sum(data) / n
+    variance = sum(map(lambda x: (x - mean) ** 2, data)) / (n - 1)
+    return variance ** 0.5
+                        </code></pre>
+                    </div>
+                </div>
+
+                <!-- Skill 2: Design Thinking & Creative Competency -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-pink-600 mb-2">2. Creative Competency: Prototyping and Design Thinking</h3>
+                    <p class="text-base mb-3">Applied the Stanford d.school's five-stage Design Thinking process (Empathize, Define, Ideate, Prototype, Test) across 5 major projects. Led the UX/UI wireframing for Project 3 (Ethical Data Governance Tool).</p>
+                    <p class="text-sm italic">Artefact: Mock Design Portfolio Screenshot (Visuals not included, but referenced as a key deliverable).</p>
+                </div>
+
+                <!-- Skill 3: Cross-Cultural Communication -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-teal-600 mb-2">3. Soft Skill: Cross-Cultural Communication and Negotiation</h3>
+                    <p class="text-base mb-3">Achieved proficiency in Spanish (B2 level) and successfully collaborated with research teams in Madrid and Santiago. Developed techniques for non-verbal communication and conflict resolution in diverse settings. The ability to articulate complex technical ideas simply was highlighted in my latest performance evaluation.</p>
+                    <p class="text-sm italic">Artefact: Excerpt from Performance Review (Mock): "Dev's communication skills were instrumental in bridging the gap between our technical team and the international client's legal department."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Collaborative and Leadership Experiences (2 Marks) -->
+        <section id="leadership" class="section-padding">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Collaborative and Leadership Experiences</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Experience 1: Capstone Project Lead -->
+                <div class="card border-l-4 border-primary-300">
+                    <h3 class="text-xl font-semibold mb-2">Capstone Project Lead (4-person team)</h3>
+                    <p class="text-sm font-medium text-gray-600 mb-3"><b>Role:</b> Project Manager and Lead Architect for the Neuro-Linguistic Interface.</p>
+                    <p class="text-sm mb-2"><b>Responsibilities:</b> Defined milestones, assigned technical tasks (Data Scientist, Hardware Engineer, Software Dev), and managed external stakeholder expectations (Biomedical Department). Managed all version control via Git.</p>
+                    <p class="text-sm mb-2"><b>Team Dynamics & Resolution:</b> Experienced conflict over architectural choices. I implemented a structured <b>Decision Matrix</b> weighing feasibility, complexity, and impact, ensuring objective conflict resolution and team consensus.</p>
+                    <p class="text-sm font-semibold text-primary-700"><b>Achievement:</b> Delivered the project two weeks ahead of schedule and won the "Best Interdisciplinary Capstone Award."</p>
+                </div>
+
+                <!-- Experience 2: Mentorship Program -->
+                <div class="card border-l-4 border-pink-300">
+                    <h3 class="text-xl font-semibold mb-2">Peer Mentorship Program Coordinator</h3>
+                    <p class="text-sm font-medium text-gray-600 mb-3"><b>Role:</b> Coordinator and Senior Mentor for 1st-year students.</p>
+                    <p class="text-sm mb-2"><b>Responsibilities:</b> Recruited and trained 15 peer mentors. Developed a curriculum focused on academic success and soft skills integration for new students. Ran weekly workshops.</p>
+                    <p class="text-sm mb-2"><b>Contribution:</b> Significantly improved the first-year retention rate in the CSE program (from 88% to 94%) by creating a supportive and collaborative learning environment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Global Awareness and Ethical Considerations (2 Marks) -->
+        <section id="ethics" class="section-padding">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Global Awareness and Ethical Considerations</h2>
+            <div class="card space-y-4">
+                <h3 class="text-xl font-semibold text-primary-700">Case Study: The Global Impact of Algorithmic Bias in Healthcare</h3>
+                <p>My work on the Neuro-Linguistic Interface was deeply influenced by the ethical dilemma of <b>algorithmic bias</b>. If the training data (EEG patterns) is primarily sourced from Western populations, the resulting model may perform poorly, or even dangerously, on individuals from globally diverse genetic or cultural backgrounds.</p>
+                <p><b>Analysis of Ethical Implications:</b> This is a matter of <b>Global Justice</b> and <b>Responsible AI</b>. I implemented a rigorous data auditing pipeline to track demographic metadata and ensure proportional representation, or where not possible, clearly document the model's limitations regarding certain populations. This moves beyond local testing to a global, responsible deployment mindset.</p>
+                <p><b>Personal Reflection:</b> I believe that as technologists, our <b>responsibility</b> extends far beyond writing functional code. Every line of code carries an implicit social contract, and demonstrating impact requires preemptive ethical reasoning to prevent harm across diverse global communities.</p>
+            </div>
+        </section>
+
+        <!-- 9. Future Aspirations and Professional Development (2 Marks) -->
+        <section id="future" class="section-padding">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Future Aspirations and Professional Development</h2>
+            <div class="card space-y-4">
+                <p>My immediate career goal is to join an organization focusing on <b>Ethical AI/ML Engineering</b>, where I can apply my combined skills in cognitive systems and advanced programming to build fair and transparent decision-making models. I aim to evolve into a Lead Data Ethicist within five years.</p>
+                <p><b>Areas for Further Study:</b> I plan to pursue a Master's degree focusing on <b>Explainable AI (XAI)</b> to deepen my understanding of model interpretability. I am also currently undertaking advanced certifications in formal verification methods to ensure computational integrity.</p>
+                <p><b>Strategy for Continuous Improvement:</b> My plan involves a minimum of 40 hours per year dedicated to asynchronous learning (MOOCs, independent research), active participation in at least one industry working group (e.g., AI Governance), and maintaining an open-source contribution schedule to keep my technical skills razor-sharp.</p>
+            </div>
+        </section>
+
+        <!-- 10. Conclusion and Self-Assessment (1 Mark) -->
+        <section id="conclusion" class="section-padding">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Conclusion and Self-Assessment</h2>
+            <div class="card space-y-4">
+                <p>The key achievement showcased in this portfolio is my ability to <b>synthesize</b> technical expertise (Python, ML) with human-centered thinking (Cognitive Systems, Design Thinking). The most valuable lesson learned is that complex systems require complex, yet disciplined, collaboration.</p>
+
+                <h3 class="text-xl font-semibold text-gray-700 mt-6 mb-2">Self-Evaluation Against Initial Goals</h3>
+                <p class="text-base">My initial goal was to graduate with a strong theoretical foundation. I exceeded this by developing significant practical skills in three key interdisciplinary projects. An area for growth remains in public-facing presentations and advocacy, which I plan to address in my future development.</p>
+
+                <h3 class="text-xl font-semibold text-gray-700 mt-6 mb-2">SWOT Analysis</h3>
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                    <div class="bg-primary-100 p-3 rounded-lg border border-primary-300">
+                        <p class="font-bold text-primary-700">Strengths (S)</p>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Deep interdisciplinary knowledge (CSE + Cognition).</li>
+                            <li>Proficiency in modern ML frameworks.</li>
+                            <li>Strong team leadership and conflict resolution.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-yellow-100 p-3 rounded-lg border border-yellow-300">
+                        <p class="font-bold text-yellow-700">Weaknesses (W)</p>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Limited professional experience outside of internships.</li>
+                            <li>Need to develop specialized domain expertise (e.g., specific industry).</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-100 p-3 rounded-lg border border-blue-300">
+                        <p class="font-bold text-blue-700">Opportunities (O)</p>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Growing demand for Ethical AI/XAI specialists.</li>
+                            <li>Network expansion through industry collaborations.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-100 p-3 rounded-lg border border-red-300">
+                        <p class="font-bold text-red-700">Threats (T)</p>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Rapid technological obsolescence in ML.</li>
+                            <li>Increased global competition for entry-level roles.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 11. Testimonial (1 Mark) -->
+        <section id="testimonial" class="section-padding mb-12">
+            <h2 class="text-3xl font-bold text-primary-700 mb-6 border-b pb-2">Testimonial</h2>
+            <div class="card bg-primary-100 border-l-8 border-primary-700 p-6 italic text-lg relative">
+                <p class="mb-4">"Dev is one of the most disciplined and self-driven students I have worked with. His development of the Quiz Web Application for OS, DBMS, and DAA reflects a deep understanding of both technical concepts and effective learning design. He translated complex curriculum requirements into an intuitive platform that genuinely enhances student comprehension. Dev's ability to combine clean engineering practices with educational insight makes him an exceptional emerging developer. Any organization seeking thoughtful, dependable talent would be fortunate to have him."</p>
+                <p class="text-right font-semibold text-primary-700">— Dr. A.D. Sharma, Professor of Computer Science</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+        <p class="text-sm">&copy; 2025 Dev Talpada E-Portfolio | Built with HTML & Tailwind CSS</p>
+    </footer>
+
+    <script>
+        // Optional: Smooth scrolling script for better UX (Tailwind utility classes handle most of the styling/responsiveness)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Only intercept internal links (excluding the navbar anchor to avoid double-scrolling)
+                if (this.getAttribute('href') !== '#navbar') {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
